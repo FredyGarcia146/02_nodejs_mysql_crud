@@ -1,0 +1,7 @@
+~$$Diagram_Abstraction.~vsdx
+Physical_Model.mwb.bak
+node_modules
+src/models
+dist
+.idea
+.env

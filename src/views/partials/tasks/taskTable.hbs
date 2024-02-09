@@ -1,0 +1,47 @@
+<div class="card card-body p-8 rounded-5 " >
+    {{#if tasks}}
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>N</th>
+                <th>title</th>
+                <th>description</th>
+                <th>done</th>
+                <th>options</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each tasks}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{title}}</td>
+                    <td>{{description}}</td>
+                    <td>{{done}}</td>
+                    <td>
+                        {{#if done }}
+                            <a class="btn btn-success" href="/tasks/{{id}}/toggleDone" >UnDone</a>
+                        {{else}}
+                            <a class="btn btn-secondary" href="/tasks/{{id}}/toggleDone" >Done</a>
+                        {{/if}}
+                        <a class="btn btn-danger" href="/tasks/{{id}}/delete" >Delete</a>
+
+                        <a class="btn btn-info" href="/tasks/{{id}}/edit">Edit</a>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+
+    {{else}}
+        <div class="h-100 d-flex align-items-center justify-content-center bg-dark">
+            <div class="text-center text-white">
+                <h1>No tasks</h1>
+                <img src="/icons/empty.svg" class="w-75" />
+            </div>
+
+        </div>
+    {{/if}}
+
+</div>
+
+

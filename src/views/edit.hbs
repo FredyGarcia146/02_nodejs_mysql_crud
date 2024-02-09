@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class=" col-md-5 offset-md-3">
+            <div class="card card-body p-8 rounded-5 ">
+                <h3>Update Task</h3>
+                <form action="/tasks/{{tasks.id}}/edit" method="POST">
+                    <div class="mb-3">
+                        <label for="title">Write a title:</label>
+                        <input
+                                type="text"
+                                name="title"
+                                placeholder="Title"
+                                value="{{tasks.title}}"
+                                class="form-control"
+                        >
+                    </div>
+
+                    <div class="mb-3"  >
+                        <label for="description">Write a description:</label>
+                        <textarea
+                                name="description"
+                                placeholder="Description"
+                                class="form-control"
+                        >{{tasks.description}}</textarea>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Guardar Cambio</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
